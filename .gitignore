@@ -1,0 +1,18 @@
+# 開発用ファイル
+@todo.md
+.cursor/
+
+# システムファイル
+.DS_Store
+Thumbs.db
+
+# エディタ設定
+.vscode/
+.idea/
+
+# ログファイル
+*.log
+
+# 一時ファイル
+*.tmp
+*.temp 

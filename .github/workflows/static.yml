@@ -1,0 +1,13 @@
+# GitHub Pages設定
+# このファイルはGitHub Pagesで静的サイトを公開するための設定です
+
+# 公開するブランチ
+source:
+  branch: gh-pages
+  path: /
+
+# カスタムドメイン（必要に応じて）
+# custom_domain: your-domain.com
+
+# HTTPS強制
+# force_https: true 
