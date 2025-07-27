@@ -4,9 +4,9 @@
 
 ## 🚀 プレイ
 
-**[🎮 今すぐプレイ](https://daideguchi.github.io/01-othello-game/)**
+**[🎮 今すぐプレイ](https://daideguchi.github.io/othello-game/)**
 
-公開URL: https://daideguchi.github.io/01-othello-game/
+公開URL: https://daideguchi.github.io/othello-game/
 
 ## 🎮 プレイ方法
 
@@ -56,7 +56,7 @@
 
 このゲームはGitHub Pagesで公開されています：
 
-**🌐 公開URL**: https://daideguchi.github.io/01-othello-game/
+**🌐 公開URL**: https://daideguchi.github.io/othello-game/
 
 このゲームは静的ファイルで構成されており、以下の環境でホスティング可能です：
 
