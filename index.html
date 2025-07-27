@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 オセロゲーム - AI対戦機能付き</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- ヘッダー -->
+        <header class="game-header">
+            <h1 class="game-title">🎯 オセロゲーム</h1>
+            <div class="game-info">
+                <div class="current-player">
+                    <div class="current-player-stone black"></div>
+                    <span id="current-player-text">黒の番です</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- メインゲームエリア -->
+        <main class="game-main">
+            <!-- スコアボード -->
+            <aside class="scoreboard">
+                <div class="score-item black-score">
+                    <div class="score-stone black"></div>
+                    <div class="score-info">
+                        <span class="score-label">黒</span>
+                        <span class="score-value" id="black-score">2</span>
+                    </div>
+                </div>
+                
+                <div class="score-item white-score">
+                    <div class="score-stone white"></div>
+                    <div class="score-info">
+                        <span class="score-label">白</span>
+                        <span class="score-value" id="white-score">2</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ゲーム盤 -->
+            <div class="board-container">
+                <div class="board" id="game-board">
+                    <!-- 8x8のマス目がJavaScriptで動的生成される -->
+                </div>
+            </div>
+
+            <!-- ゲームコントロール -->
+            <aside class="game-controls">
+                <!-- ゲームモード選択 -->
+                <div class="mode-controls">
+                    <h3>🎮 ゲームモード</h3>
+                    <div class="mode-buttons">
+                        <button id="human-btn" class="control-btn mode-btn active">
+                            👥 人間対戦
+                        </button>
+                        <div class="ai-mode-group">
+                            <span class="ai-label">🤖 AI対戦：</span>
+                            <button id="ai-easy-btn" class="control-btn ai-btn easy">
+                                😊 簡単
+                            </button>
+                            <button id="ai-normal-btn" class="control-btn ai-btn normal">
+                                😐 普通
+                            </button>
+                            <button id="ai-hard-btn" class="control-btn ai-btn hard">
+                                😤 難しい
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ゲーム操作 -->
+                <div class="game-actions">
+                    <button id="hint-btn" class="control-btn hint-btn">
+                        💡 ヒント
+                    </button>
+                    <button id="sound-btn" class="control-btn sound-btn">
+                        🔊 サウンド
+                    </button>
+                    <button id="stats-btn" class="control-btn stats-btn">
+                        📊 統計
+                    </button>
+                    <button id="reset-stats-btn" class="control-btn reset-stats-btn">
+                        🗑️ 統計リセット
+                    </button>
+                    <button id="settings-btn" class="control-btn settings-btn">
+                        ⚙️ 設定
+                    </button>
+                    <button id="restart-btn" class="control-btn restart-btn">
+                        🔄 やり直し
+                    </button>
+                </div>
+            </aside>
+
+            <!-- ゲーム状態表示 -->
+            <div class="game-status" id="game-status">
+                ゲーム開始！黒の番です
+            </div>
+        </main>
+
+        <!-- ゲーム終了モーダル -->
+        <div class="modal-overlay" id="game-over-modal">
+            <div class="modal-content">
+                <h2 class="modal-title">🎉 ゲーム終了！</h2>
+                <div class="final-score">
+                    <div class="final-score-item">
+                        <div class="score-stone black"></div>
+                        <span class="score-label">黒</span>
+                        <span class="score-value" id="final-black-score">0</span>
+                    </div>
+                    <div class="final-score-item">
+                        <div class="score-stone white"></div>
+                        <span class="score-label">白</span>
+                        <span class="score-value" id="final-white-score">0</span>
+                    </div>
+                </div>
+                <div class="winner-text" id="winner-text"></div>
+                <button class="modal-btn" id="play-again-btn">もう一度プレイ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
